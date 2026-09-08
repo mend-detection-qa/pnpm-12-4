@@ -1,0 +1,10 @@
+{
+  "name": "multi-ecosystem-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "pnpm 12.4 multi-ecosystem workspace probe for Mend SCA testing",
+  "engines": {
+    "pnpm": ">=12.4.0",
+    "node": ">=20.0.0"
+  }
+}
