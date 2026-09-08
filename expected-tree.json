@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-09-08T11:32:01Z",
+  "packages": {
+    "@hono/node-server": {
+      "dependencies": [
+        "hono"
+      ],
+      "group": "dev",
+      "marker": null,
+      "optional": false,
+      "source": "registry",
+      "source_detail": {
+        "integrity": "sha512-JqJFxCpWAuxQLLnMOdAZXOmByQLpgzQPY5KYnQL8oFSMJiNcl9xEEJELPbhLkYZfYb5Ys25cAZ6ym5EAVlH0g==",
+        "lockfile_version": "9.0",
+        "workspace": "packages/api"
+      },
+      "version": "1.12.0"
+    },
+    "hono": {
+      "dependencies": [],
+      "group": "main",
+      "marker": null,
+      "optional": false,
+      "source": "registry",
+      "source_detail": {
+        "integrity": "sha512-xDOTXBRiiBD/OhNYGV8WpjqMF/D5sVOfBbPzygBSGHGqpxMIjhpBNHLCT/XMaT6KOXn5OWo51JbU+gsVzB2Ng==",
+        "lockfile_version": "9.0",
+        "workspace": "packages/api"
+      },
+      "version": "4.4.2"
+    }
+  },
+  "pm": "pnpm",
+  "pm_version_tested": "9",
+  "pm_version_under_test": "12.4.0",
+  "root": {
+    "dependencies": [
+      "hono",
+      "@hono/node-server"
+    ],
+    "name": "multi-ecosystem-workspace",
+    "version": "0.1.0"
+  },
+  "schema_version": "1.2",
+  "source_file": "packages/api/package.json",
+  "warnings": [
+    "SCOPE: This expected-tree covers the JS pnpm sub-tree only (pnpm-lock.yaml scope). Python sub-project packages/ml must be detected by the Python resolver via pylock.toml (PEP 751). Cargo sub-project packages/cli must be detected by the Cargo resolver via Cargo.lock. Neither Python nor Cargo packages should appear in this tree.",
+    "NEW_FORMAT: pnpm-workspace.yaml contains a new 'ecosystems:' block (pnpm 12.4+). If the pnpm YAML parser throws on this block, the scan will produce zero JS deps. The ecosystems block must be parsed without error and then ignored by the pnpm resolver.",
+    "NEW_LOCKFILE: packages/ml/pylock.toml uses PEP 751 format. Mend's Python resolver must recognize this lockfile type alongside poetry.lock, Pipfile.lock, etc. If unrecognized, the Python sub-tree is silently missed.",
+    "COORDINATE_PREFIX: pnpm 12.4 uses 'pypi:' and 'crate:' prefixes for cross-ecosystem coordinate declarations. These prefixes must NOT be interpreted as npm package names by the pnpm resolver.",
+    "RESOLVER_GAP: The upstream pnpm resolver doc (SHA 351915ae, fetched 2026-09-08) covers lockfileVersion up to 9.0 and does not mention pnpm 12.4 multi-ecosystem workspaces. This probe is exploratory — no regression baseline exists yet.",
+    "SIBLING_PROBE: See version-pm-multi-ecosystem-pre-vs-post-12-4 in version-variations.md for the paired probe (pnpm 11.x JS-only vs pnpm 12.4 multi-ecosystem)."
+  ]
+}
