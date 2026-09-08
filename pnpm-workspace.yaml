@@ -1,0 +1,17 @@
+# pnpm 12.4 multi-ecosystem workspace
+# The new `ecosystems:` block declares Python and Cargo sub-projects
+# alongside standard npm packages. pnpm generates ecosystem-native
+# lockfiles (pylock.toml, Cargo.lock) for each sub-project while
+# maintaining pnpm-lock.yaml for JS packages only.
+
+packages:
+  - 'packages/api'
+
+ecosystems:
+  python:
+    projects:
+      - 'packages/ml'
+  cargo:
+    indexUrl: 'https://github.com/rust-lang/crates.io-index'
+    projects:
+      - 'packages/cli'
