@@ -1,0 +1,12 @@
+{
+  "name": "@probe/api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "JS sub-project: HTTP API (hono)",
+  "dependencies": {
+    "hono": "^4.4.0"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^1.12.0"
+  }
+}
